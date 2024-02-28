@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    /* font-weight: 100; */
+}
+
+.headerMarvel {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+    background-color: rgb(22, 21, 21);
+    border-bottom: solid 3px red;
+}
+
+.headerDC {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+    background-color: rgb(22, 21, 21);
+    border-bottom: solid 3px #0476F2;
+}
+
+h2 {
+    color: #fff;
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+.logoMarvel {
+    height: 50px;
+    width: 100px;
+    padding: 10px;
+}
+
+.logoDC {
+    height: 100px;
+    width: 100px;
+}
+
+/* .imagen {
+    height: 60%;
+} */
+
+.imagen {
+    object-fit:cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.cuerpo {
+    /* border: solid 1px red; */
+    /* height: 100vh; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-rows: auto;
+    gap: 40px;
+    padding: 15px;
+}
+
+.caracter {
+    /* width: 15vw; */
+    /* margin: 20px 0 0 20px; */
+    border: solid 4px black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    /* border: 1px solid red; */
+    box-shadow: 0 0 15px 0 rgb(22, 21, 21);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .caracterDC {
+    border: solid 4px black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0 15px 0 rgb(22, 21, 21);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+.contenido {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    height: 50px;
+    
+}
+
+.ver, .cerrar {
+    padding: 3px 20px 3px 20px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    font-family: "Poppins", sans-serif;
+}
+
+.caracter:hover {
+    background-color: black;
+    color: #fff;
+}
+
+dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 40vw;
+    height: 55vh;
+    text-align: center;
+    z-index: 5;
+}
+
+.seccion{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cerrar:hover {
+    background-color: #0476F2;
+}

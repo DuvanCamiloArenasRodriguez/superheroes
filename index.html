@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superhéroes</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="storage/images/favicon.jpeg" type="image/x-icon">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+
+        <!-- modal -->
+    <dialog class="ventana">
+        <section class="seccion">
+            <img id="foto" class="imgModal" src="storage/images/ironMan/ironMan1.jpg" alt="No se pudo cargar la imagen" />
+            <div class="informacion">
+                <h3 class="tituloModal">IronMan</h3>
+                <p class="descripcion">
+                    Tony Stark, un genio multimillonario, se convierte en Iron Man gracias a un traje de alta tecnología que él mismo construye para luchar contra el mal.
+                </p>
+                <p class="fecha"></p>
+                <button class="cerrar" id="nombrePersonaje">Cerrar</button>
+            </div>
+        </section>
+    </dialog>
+
+
+
+
+    <main>
+        <div class="marvel">
+            <div class="headerMarvel">
+                <img src="storage/images/marvelLogo.svg.png" class="logoMarvel" alt="No se puede cargar la imagen">
+                <h2>MARVEL</h2>
+            </div>
+            <div class="cuerpo">
+                <div class="caracter caracterMarvel">
+                    <img class="imagen" src="storage/images/ironMan/ironMan1.jpg" alt="No se puede cargar la imagen">
+                    <div class="contenido">
+                        <h3 class="nombrePersonaje">Iron Man</h3>
+                        <button class="ver">Ver</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="DC">
+            <div class="headerDC">
+                    <img src="storage/images/DCComicsLogo.png" class="logoDC" alt="No se puede cargar la imagen">
+                <h2>DC Cómics</h2>
+            </div>
+
+            <div class="cuerpo ">
+                <div class="caracter caracterDC">
+                    <img class="imagen" src="https://i.pinimg.com/564x/42/e6/b4/42e6b484930e3bbc330610da34d4648b.jpg" alt="No se puede cargar la imagen">
+                    <div class="contenido">
+                        <h3 class="nombrePersonaje">Batman</h3>
+                        <button class="ver">Ver</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
