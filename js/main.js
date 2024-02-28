@@ -14,7 +14,7 @@ const marvel = [{
 },
 {
     "id": "5d86371f25a058e5b1c8a65e",
-    "about": "Laboris est duis eiusmod adipisicing cillum ut sit ea Lorem non laboris quis Lorem. Est culpa esse aliqua non labore dolor esse labore nulla mollit. Nostrud amet est quis adipisicing dolor. Labore veniam elit veniam non ad ex consequat excepteur eiusmod. Minim cupidatat velit Lorem culpa quis consequat incididunt qui amet incididunt pariatur ex aliquip aliqua. Magna ex elit in aliquip minim eu ut ut fugiat ullamco deserunt adipisicing cillum.",
+    "about": "Steve Rogers es un super soldado cuyo coraje y sentido del deber lo convierten en el líder icónico de los Vengadores. Dotado con habilidades físicas mejoradas por un suero experimental, porta un escudo indestructible como símbolo de su compromiso con la libertad y la justicia.",
     "picture": "https://cdn.marvel.com/content/1x/003cap_ons_crd_03.jpg",
     "name": "Captain America"
 },
@@ -134,7 +134,7 @@ const DC = [{
 },
 {
     "id": "5d86371f25a058e5b1c8a65e",
-    "about": "También conocida como Diana Prince, es una guerrera amazona de la isla de Themyscira. Dotada de fuerza sobrehumana, velocidad y agilidad, así como habilidades de vuelo y habilidades en combate cuerpo a cuerpo, Wonder Woman lucha por la justicia, la paz y la igualdad en el mundo, utilizando su Lazo de la Verdad y otros artefactos místicos para ayudar en su misión.",
+    "about": "También conocida como Diana Prince, es una guerrera amazona de la isla de Themyscira. Dotada de fuerza sobrehumana, velocidad y agilidad, así como habilidades de vuelo y habilidades en combate cuerpo a cuerpo, Wonder Woman lucha por la justicia, la paz y la igualdad en el mundo.",
     "picture": "https://i.pinimg.com/564x/52/b6/15/52b615b75c6d7d067e5a82eb6e622f22.jpg",
     "name": "Wonder Woman"
 },
@@ -309,11 +309,11 @@ DC.forEach((item) => {
     contenido.appendChild(boton)
     cuerpoDC.appendChild(caracter)
     
-})
 
-// Creacion de modal
-const modal = document.querySelector(".ventana")
-const boton = document.querySelector(".ver")
+    const modal = document.querySelector(".ventana")
+    // const boton = document.querySelector(".ver")
+
+
 
 boton.addEventListener('click', () => {
     modal.style.display = "block"
@@ -324,6 +324,10 @@ const cerrar = document.querySelector(".cerrar")
 cerrar.addEventListener('click', () => {
     modal.style.display = "none"
 })
+})
+
+// Creacion de modal
+
 
 // Detectar click para el dialog dinámico Marvel
 const seccionMarvel = document.querySelector(".marvel")
@@ -346,6 +350,10 @@ function mostrarModal(heroe) {
     const descripcion = document.querySelector('.descripcion')
     const foto = document.querySelector('.imgModal')
    
+    console.log(titulo);
+    console.log(descripcion);
+
+
     titulo.textContent = heroe.name
     descripcion.textContent = heroe.about
     foto.src = heroe.picture
@@ -360,7 +368,20 @@ seccionDC.addEventListener('click', (evento) => {
 })
 
 function buscarPersonajeDC(nombre) {
-    const guardarPersonaje = DC.find((item)=> item.name === nombre)
-    console.log(guardarPersonaje)
-    mostrarModal(guardarPersonaje)
+    const guardarPersonajedc = DC.find((item)=> item.name === nombre)
+    console.log(guardarPersonajedc)
+    mostrarModal(guardarPersonajedc)
 }
+
+// function mostrarModalDC(heroe) {
+//     const titulo = document.querySelector('.tituloModal')
+//     const descripcion = document.querySelector('.descripcion')
+//     const foto = document.querySelector('.imgModal')
+   
+//     console.log(titulo);
+//     console.log(descripcion);
+
+//     titulo.textContent = heroe.name
+//     descripcion.textContent = heroe.about
+//     foto.src = heroe.picture
+// }
