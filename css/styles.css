@@ -16,7 +16,7 @@
     gap: 20px;
     
     background-color: rgb(22, 21, 21);
-    border-bottom: solid 3px red;
+    border-bottom: solid 3px #F0131E;
 }
 
 .headerDC {
@@ -46,14 +46,45 @@ h3 {
     padding: 10px;
 }
 
+.logoMarvel:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.oculto {
+    display: none;
+}
+
+.logoDC:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
+
 .logoDC {
     height: 100px;
     width: 100px;
 }
 
-/* .imagen {
-    height: 60%;
-} */
+.headerMarvel i {
+    color: #fff;
+    font-size: 1.7rem;
+}
+
+.buscador {
+    position: absolute;
+    right: 0;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+}
+
+.buscador input {
+    border-radius: 10px;
+    padding: 7px;
+    margin-right: 10px;
+}
 
 .imagen {
     object-fit:cover;
@@ -61,7 +92,19 @@ h3 {
     height: 100%;
 }
 
+.tituloHeroes {
+    text-align: center;
+    margin-top: 15px;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
 
+#tituloMarvel{
+    color: #F0131E;
+}
+
+#tituloDC {
+    color: #0476F2;
+}
 
 .cuerpo {
     /* border: solid 1px red; */
@@ -134,6 +177,8 @@ dialog {
     height: 55vh;
     text-align: center;
     z-index: 5;
+    border-radius: 20px;
+    box-shadow: 0 0 15px 0 rgb(22, 21, 21);
 }
 
 .seccion{
@@ -146,6 +191,7 @@ dialog {
 
 .cerrar:hover {
     background-color: #0476F2;
+    
 }
 
 .informacion {
@@ -157,6 +203,15 @@ dialog {
 
 .tituloModal {
     font-size: 2rem;
+}
+
+.todos {
+    font-size: clamp(1rem, 10vw, 2rem);
+}
+
+.todos:hover {
+    scale: 1.1;
+    cursor: pointer;
 }
 
 @media(max-width: 768px) {

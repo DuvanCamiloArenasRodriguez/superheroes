@@ -238,7 +238,6 @@ const DC = [{
 
 
 
-
 const cuerpo = document.querySelector('.cuerpo')
 marvel.forEach((item) => {
     // const marvel = document.createElement("DIV")
@@ -373,15 +372,50 @@ function buscarPersonajeDC(nombre) {
     mostrarModal(guardarPersonajedc)
 }
 
-// function mostrarModalDC(heroe) {
-//     const titulo = document.querySelector('.tituloModal')
-//     const descripcion = document.querySelector('.descripcion')
-//     const foto = document.querySelector('.imgModal')
-   
-//     console.log(titulo);
-//     console.log(descripcion);
+// Cambio de ventana al dar click en logos
+const header = document.querySelector('.headerMarvel')
 
-//     titulo.textContent = heroe.name
-//     descripcion.textContent = heroe.about
-//     foto.src = heroe.picture
-// }
+const logoMarvel = document.querySelector('.logoMarvel')
+logoMarvel.addEventListener('click', () => {
+    seccionDC.style.display = "none"
+    seccionMarvel.style.display = "block"
+    header.style.borderColor = '#F0131E'
+
+})
+
+const logoDC = document.querySelector('.logoDC')
+logoDC.addEventListener('click', () => {
+    seccionMarvel.style.display = "none"
+    seccionDC.style.display = "block"
+    header.style.borderColor = '#0476F2'
+})
+
+const todos = document.querySelector('.todos')
+todos.addEventListener('click', () => {
+    seccionMarvel.style.display = "block"
+    seccionDC.style.display = "block"
+    header.style.borderColor = 'rgb(22, 21, 21)'
+})
+
+
+// Buscador
+const buscador = document.querySelector('#buscar')
+buscador.addEventListener('input', obtenerValor)
+
+function obtenerValor(evento) {
+    const valor = evento.target.value.toLowerCase();
+    console.log(valor);
+    const resultMarvel = marvel.filter(tal => tal.name.toLocaleLowerCase().startsWith(valor))
+    console.log(resultMarvel);
+
+    const resultDC = DC.filter(tal => tal.name.toLocaleLowerCase().startsWith(valor))
+    console.log(resultDC);
+
+    const caracter = document.createElement("DIV")
+    caracter.classList.add('caracter')
+    if (resultMarvel.name == marvel.name) {
+        console.log('está');
+        
+    } 
+}
+

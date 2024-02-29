@@ -6,7 +6,8 @@
     <title>Superhéroes</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="shortcut icon" href="storage/images/favicon.jpeg" type="image/x-icon">
-    <script src="js/main.js" defer></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="js/main.js" type="module" defer></script>
 </head>
 <body>
 
@@ -25,40 +26,48 @@
         </section>
     </dialog>
 
-
-
-
     <main>
-        <div class="marvel" id="marvel">
-            <div class="headerMarvel">
-                <img src="storage/images/marvelLogo.svg.png" class="logoMarvel" alt="No se puede cargar la imagen">
-                <h2>MARVEL</h2>
+        <div class="headerMarvel">
+            <img src="storage/images/marvelLogo.svg.png" class="logoMarvel" alt="No se puede cargar la imagen">
+            <img src="storage/images/DCComicsLogo.png" class="logoDC" alt="No se puede cargar la imagen">
+            <h2 class="todos">Héroes</h2>
+            <div class="buscador">
+                <input id="buscar" type="text" placeholder="Buscar Héroe">
+                <i class='bx bx-search'></i>
             </div>
+            
+            <!-- <h2>MARVEL</h2> -->
+        </div>
+        <div class="marvel" id="marvel" >
+            <h3 class="tituloHeroes" id="tituloMarvel">Marvel</h3>
             <div class="cuerpo">
-                <div class="caracter caracterMarvel">
+                <!-- <div class="caracter caracterMarvel">
                     <img class="imagen" src="storage/images/ironMan/ironMan1.jpg" alt="No se puede cargar la imagen">
                     <div class="contenido">
                         <h3 class="nombrePersonaje">Iron Man</h3>
                         <button class="ver">Ver</button>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
 
-        <div class="DC">
-            <div class="headerDC">
-                    <img src="storage/images/DCComicsLogo.png" class="logoDC" alt="No se puede cargar la imagen">
+        
+        
+        <div class="DC" id="seccionDC">
+            <!-- <div class="headerDC">
+                <img src="storage/images/marvelLogo.svg.png" class="logoMarvel" alt="No se puede cargar la imagen">
+                <img src="storage/images/DCComicsLogo.png" class="logoDC" alt="No se puede cargar la imagen">
                 <h2>DC Cómics</h2>
-            </div>
-
+            </div> -->
+            <h3 class="tituloHeroes" id="tituloDC">Héroes DC Cómics</h3>
             <div class="cuerpo ">
-                <div class="caracter caracterDC">
+                <!-- <div class="caracter caracterDC">
                     <img class="imagen" src="https://i.pinimg.com/564x/42/e6/b4/42e6b484930e3bbc330610da34d4648b.jpg" alt="No se puede cargar la imagen">
                     <div class="contenido">
                         <h3 class="nombrePersonaje">Batman</h3>
                         <button class="ver" id="ver">Ver</button>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </main>
