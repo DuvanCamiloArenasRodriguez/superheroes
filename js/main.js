@@ -274,7 +274,7 @@ marvel.forEach((item) => {
     boton.addEventListener('click', function() {
     modal.style.display = "block"
     console.log("sdjsd.kg")
-})
+    })
 })
 
 let cuerpoDC = document.querySelector('.DC .cuerpo')
@@ -402,20 +402,71 @@ todos.addEventListener('click', () => {
 const buscador = document.querySelector('#buscar')
 buscador.addEventListener('input', obtenerValor)
 
+const cuerpoMarvel = document.querySelector("#cuerpoMarvel");
+const cuerpoDCC = document.querySelector("#cuerpoDC");
 function obtenerValor(evento) {
     const valor = evento.target.value.toLowerCase();
     console.log(valor);
     const resultMarvel = marvel.filter(tal => tal.name.toLocaleLowerCase().startsWith(valor))
     console.log(resultMarvel);
+    borrarCartas(cuerpoDCC)
+    generarCartas(resultMarvel)
+
 
     const resultDC = DC.filter(tal => tal.name.toLocaleLowerCase().startsWith(valor))
     console.log(resultDC);
+    borrarCartas(cuerpoMarvel)
+    generarCartas(resultDC)
 
-    const caracter = document.createElement("DIV")
-    caracter.classList.add('caracter')
-    if (resultMarvel.name == marvel.name) {
-        console.log('está');
+
+    // if (resultMarvel.name == marvel.name) {
+    //     console.log(marvel.name);
         
-    } 
+    // } 
 }
 
+function generarCartas(params) {
+    params.forEach((item) => {
+        // const marvel = document.createElement("DIV")
+        const caracter = document.createElement("DIV")
+        const foto = document.createElement("IMG")
+        const contenido = document.createElement("DIV")
+        const titulo = document.createElement("H3")
+        const boton = document.createElement("BUTTON")
+        boton.id = item.name
+    
+        
+        // Asignar clases
+        // marvel.classList.add('marvel')
+        caracter.classList.add('caracter')
+        foto.classList.add('imagen')
+        contenido.classList.add('contenido')
+        titulo.classList.add('nombrePersonaje')
+        boton.classList.add('ver')
+        boton.innerHTML = "Ver"
+        foto.src = item.picture
+        titulo.textContent = item.name
+        
+        // Anidar elementos
+        // marvel.appendChild(cuerpo)
+        caracter.appendChild(foto)
+        caracter.appendChild(contenido)
+        contenido.appendChild(titulo)
+        contenido.appendChild(boton)
+        cuerpo.appendChild(caracter)
+    
+        const modal = document.querySelector(".ventana")
+        // const botonModal = document.querySelector(".ver")
+    
+        boton.addEventListener('click', function() {
+        modal.style.display = "block"
+        console.log("sdjsd.kg")
+        })
+    })
+}
+
+function borrarCartas(cuerpo) {
+    while (cuerpo.firstChild) {
+        cuerpo.removeChild(cuerpo.firstChild)
+    }
+}
